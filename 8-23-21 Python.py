@@ -101,3 +101,41 @@ def front3(str):
     return front + front + front
 
 print(front3("aPple"))
+
+def string_times(str, n):
+    newstr = ""
+    while n > 0:
+        newstr += str
+        n -= 1
+    return newstr
+
+print(string_times("doo", 3))
+
+def front_times(str, n):
+    front = str[:3]
+    newstr = ""
+    for x in range(n):
+        newstr += front
+    return newstr
+
+print(front_times("woohoo", 4))
+
+def string_bits(str):
+    x = len(str)
+    newstr = ""
+    for num in range(0, x, 2):
+        newstr += str[num]
+    return newstr
+
+print(string_bits("heartbeat"))
+
+def string_splosion(str):
+    newstr = ""
+    counter = 0
+    while counter <= len(str):
+        newstr += str[:counter]
+        counter += 1
+    return newstr
+
+print(string_splosion("Dude"))
+
